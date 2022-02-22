@@ -19,5 +19,5 @@ def trimmer(filename):
             edited_lines.append(line)
 
     """수정된 내용을 쓰기"""
-    with open('result.tsv', 'w') as f:
+    with open(filename, 'w') as f:
         f.writelines(edited_lines)
