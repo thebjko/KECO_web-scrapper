@@ -3,7 +3,6 @@ import re
 
 def trimmer(filename):
     """초기화"""
-    lines = []
     edited_lines = []
 
     """tsv 파일 읽어오기"""
