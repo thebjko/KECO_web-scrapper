@@ -69,28 +69,3 @@ for url in urls_list:
             progress += 1
 
 trimmer('result.tsv')
-
-"""아래는 연습용 스크립트입니다"""
-# url = f"https://www.data.go.kr/tcs/dss/selectDataSetList.do?dType=FILE&keyword=&detailKeyword=&publicDataPk=&recmSe=&detailText=&relatedKeyword=&commaNotInData=&commaAndData=&commaOrData=&must_not=&tabId=&dataSetCoreTf=&coreDataNm=&sort=updtDt&relRadio=&orgFullName=%ED%95%9C%EA%B5%AD%ED%99%98%EA%B2%BD%EA%B3%B5%EB%8B%A8&orgFilter=%ED%95%9C%EA%B5%AD%ED%99%98%EA%B2%BD%EA%B3%B5%EB%8B%A8&org=%ED%95%9C%EA%B5%AD%ED%99%98%EA%B2%BD%EA%B3%B5%EB%8B%A8&orgSearch=&currentPage={i}&perPage=40&brm=&instt=&svcType=&kwrdArray=&extsn=&coreDataNmArray=&pblonsipScopeCode="
-#
-#
-# res = requests.get(url)
-# res.raise_for_status()
-#
-# soup = BeautifulSoup(res.text, "lxml")
-# print(soup.title.get_text()) # 제목 정보
-# print(soup.a.attrs) # 처음 a
-# print(soup.a["href"])
-# print(soup.find("span", attrs={"class": "title"}).get_text().strip().lstrip("한국환경공단_"))
-# result_list = soup.find(attrs={"class": "result-list"}) # -> "미리보기"
-# print(result_list.find_all("a", attrs={"href": r"/data/*"}))
-# print(result_list.a.get_text())
-
-# result_list = soup.find("span", attrs={"class": "title"})
-
-### 참조: https://stackoverflow.com/questions/24748445/beautiful-soup-using-regex-to-find-tags
-# results_list = soup.find_all("a", {"href": re.compile(r'/data/*')})
-# for result in results_list:
-#     urls_list.append(f"https://www.data.go.kr{result['href']}")
-
-# print(result_list.get_text().strip())
